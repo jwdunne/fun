@@ -2,6 +2,13 @@
 
 Functional programming utility belt for PHP.
 
+## Project Goals
+
+1. Provide a comprehensive set of well-tested functional types and functions
+2. Work on primitive PHP data types
+3. Make it straight-forward for developers to use, extend and integrate with
+  other libraries
+
 ## Roadmap for v0.1.0
 
 ### Relations & Properties
@@ -12,8 +19,8 @@ Functional programming utility belt for PHP.
   - [ ] Implement `irreflexive` property
   - [ ] Implement `antisymmetric`
 - [x] Implement `eq` tests
-- [ ] Implement `Relations` module
-- [ ] Refactor `eq` to `Relations`
+- [x] Implement `Relations` module
+- [x] Refactor `eq` to `Relations`
   - [ ] Implement `Ord` relations
     - [ ] Implement `lt`
     - [ ] Implement `lte`
