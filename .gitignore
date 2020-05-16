@@ -1,0 +1,6 @@
+/vendor/
+composer.lock
+infection.log
+.vscode
+.phpunit.result.cache
+.DS_Store
