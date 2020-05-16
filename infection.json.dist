@@ -8,6 +8,9 @@
         "text": "infection.log"
     },
     "mutators": {
-        "@default": true
+        "@default": true,
+        "@return_value": true,
+        "@identical": true,
+        "@conditional_negotiation": true
     }
 }
