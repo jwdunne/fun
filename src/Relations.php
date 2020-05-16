@@ -12,8 +12,7 @@ const eq = '\Fun\eq';
 /**
  * General equality binary relation.
  *
- * Supports instances of type Eq as well as scalars
- * and arrays.
+ * Supports instances of type Eq as well as scalars and arrays.
  *
  * @psalm-type Equal=scalar|array|Eq
  * @psalm-pure
