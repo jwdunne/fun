@@ -5,6 +5,11 @@ namespace Fun;
 use Fun\Types\Eq;
 
 /**
+ * @const callable
+ */
+const id = '\Fun\id';
+
+/**
  * Identity function
  *
  * @template T
@@ -16,11 +21,6 @@ function id($x)
 {
     return $x;
 }
-
-/**
- * @const callable
- */
-const id = '\Fun\id';
 
 /**
  * General equality binary operator.
@@ -42,3 +42,5 @@ function eq($a, $b)
 
     return $a === $b;
 }
+
+const eq = '\Fun\eq';
