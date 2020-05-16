@@ -5,6 +5,11 @@ namespace Fun;
 use Fun\Types\Eq;
 
 /**
+ * @const callable
+ */
+const eq = '\Fun\eq';
+
+/**
  * General equality binary relation.
  *
  * Supports instances of type Eq as well as scalars
@@ -28,7 +33,7 @@ function eq($a, $b)
 /**
  * @const callable
  */
-const eq = '\Fun\eq';
+const neq = '\Fun\neq';
 
 /**
  * Negation of eq.
@@ -41,11 +46,5 @@ const eq = '\Fun\eq';
  */
 function neq($a, $b)
 {
-    if ($a instanceof Eq && $b instanceof Eq) {
-        return $a->neq($b);
-    }
-
-    return $a !== $b;
+    return !eq($a, $b);
 }
-
-const neq = '\Fun\neq';
