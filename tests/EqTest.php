@@ -27,8 +27,12 @@ use const Fun\neq;
  * // Reflexivity
  * eq($a, $a) === true
  *
+ * // Irreflexivity
+ * neq($a, $a) === false
+ *
  * // Symmetry
  * eq($a, $b) === eq($b, $a)
+ * neq($a, $b) === neq($b, $a)
  *
  * // Transitivity
  * eq($a, $b) && eq($b, $c) => eq($a, $c);
