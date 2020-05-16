@@ -2,8 +2,6 @@
 
 namespace Fun;
 
-use Fun\Types\Eq;
-
 /**
  * @const callable
  */
@@ -23,24 +21,13 @@ function id($x)
 }
 
 /**
- * General equality binary operator.
+ * Take two functions $x and $y and return ($x . $y)
  *
- * Supports instances of type Eq as well as scalars
- * and arrays.
- *
- * @psalm-type Equal=scalar|array|Eq
- * @psalm-pure
- * @param Equal $a
- * @param Equal $b
- * @return bool
+ * @param mixed $x
+ * @param mixed $y
+ * @return void
  */
-function eq($a, $b)
+function compose($x, $y)
 {
-    if ($a instanceof Eq && $b instanceof Eq) {
-        return $a->eq($b);
-    }
-
-    return $a === $b;
+    return fn (...$args) => $x($y(...$args));
 }
-
-const eq = '\Fun\eq';

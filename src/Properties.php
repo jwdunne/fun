@@ -11,6 +11,11 @@
 namespace Fun;
 
 /**
+ * @const callable
+ */
+const neg = '\Fun\neg';
+
+/**
  * Negates a property
  *
  * FIXME: I don't like this...
@@ -36,11 +41,29 @@ const reflexive = '\Fun\reflexive';
  * @psalm-pure
  * @template T
  * @param callable(T, T):bool $op
- * @psalm-return callable(T): bool
+ * @return callable(T): bool
  */
 function reflexive($op): callable
 {
     return fn ($x): bool => $op($x, $x) === true;
+}
+
+/**
+ * @const callable
+ */
+const irreflexive = '\Fun\irreflexive';
+
+/**
+ * Tests irreflexivity of relation R such that `!(x R x)` holds.
+ *
+ * @psalm-pure
+ * @template T
+ * @param callable(T, T):bool $op
+ * @return callable(T): bool
+ */
+function irreflexive($op): callable
+{
+    return neg(reflexive($op));
 }
 
 /**

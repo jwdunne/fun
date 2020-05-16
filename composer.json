@@ -16,7 +16,8 @@
   "autoload": {
     "files": [
       "src/Fun.php",
-      "src/Properties.php"
+      "src/Properties.php",
+      "src/Relations.php"
     ],
     "psr-4": {
       "Fun\\": "src/"

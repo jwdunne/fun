@@ -11,7 +11,7 @@ Functional programming utility belt for PHP.
   - [x] Test `transitive` property
   - [ ] Implement `irreflexive` property
   - [ ] Implement `antisymmetric`
-- [ ] Implement `eq` tests
+- [x] Implement `eq` tests
 - [ ] Implement `Relations` module
 - [ ] Refactor `eq` to `Relations`
   - [ ] Implement `Ord` relations
@@ -29,7 +29,7 @@ Functional programming utility belt for PHP.
 ### Data Types
 
 - [ ] Implement `Pair` type
-- [ ] Implement `Ord` type
+- [x] Implement `Ord` type
 - [ ] Implement `Boolean` type
 - [ ] Implement useful instances of `Eq`
 - [ ] Implement useful instances of `Ord`
