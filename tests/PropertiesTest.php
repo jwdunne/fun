@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use QuickCheck\PHPUnit\PropertyConstraint;
 use QuickCheck\Property;
 
+use function Fun\neg;
 use function Fun\reflexive;
 use function Fun\symmetric;
 use function Fun\transitive;
@@ -31,17 +32,22 @@ class PropertiesTest extends TestCase
         ['eq' => $eq, 'lt' => $lt] = $this->ops();
 
         // = is reflexive
-        $this->assertTrue(reflexive($eq, 1));
-
-        $property = Property::forAll(
-            [Gen::ints()],
-            fn ($x): bool => reflexive($eq, $x)
+        $this->assertThat(
+            Property::forAll(
+                [Gen::ints()],
+                reflexive($eq)
+            ),
+            PropertyConstraint::check()
         );
 
-        $this->assertThat($property, PropertyConstraint::check());
-
         // < is not reflexive
-        $this->assertFalse(reflexive($lt, 1));
+        $this->assertThat(
+            Property::forAll(
+                [Gen::ints()],
+                neg(reflexive($lt))
+            ),
+            PropertyConstraint::check()
+        );
     }
 
     public function test_symmetric()
@@ -49,11 +55,11 @@ class PropertiesTest extends TestCase
         ['eq' => $eq, 'lt' => $lt] = $this->ops();
 
         // = is symmetric
-        $this->assertTrue(symmetric($eq, 1, 2));
-        $this->assertTrue(symmetric($eq, 1, 1));
+        $this->assertTrue(symmetric($eq)(1, 2));
+        $this->assertTrue(symmetric($eq)(1, 1));
 
         // < is not symmetric
-        $this->assertFalse(symmetric($lt, 1, 2));
+        $this->assertFalse(symmetric($lt)(1, 2));
     }
 
     public function test_transitive()
@@ -61,12 +67,12 @@ class PropertiesTest extends TestCase
         ['eq' => $eq, 'lt' => $lt] = $this->ops();
 
         // = is transitive
-        $this->assertTrue(transitive($eq, 1, 2, 3));
-        $this->assertTrue(transitive($eq, 1, 2, 3));
-        $this->assertTrue(transitive($eq, 1, 1, 1));
+        $this->assertTrue(transitive($eq)(1, 2, 3));
+        $this->assertTrue(transitive($eq)(1, 2, 3));
+        $this->assertTrue(transitive($eq)(1, 1, 1));
 
         // < is transitive
-        $this->assertTrue(transitive($lt, 1, 2, 3));
-        $this->assertTrue(transitive($lt, 3, 2, 1));
+        $this->assertTrue(transitive($lt)(1, 2, 3));
+        $this->assertTrue(transitive($lt)(3, 2, 1));
     }
 }

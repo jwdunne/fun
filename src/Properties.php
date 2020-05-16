@@ -16,7 +16,19 @@ namespace Fun;
 const reflexive = '\Fun\reflexive';
 
 /**
+ * Negates a property
+ *
+ * TODO: I don't like this...
+ *
+ * @psalm-pure
+ * @template T
+ * @param callable(...T):bool $op
+ * @return callable(...T):bool
  */
+function neg($op): callable
+{
+    return fn (...$args) => !$op(...$args);
+}
 
 /**
  * Tests reflexivity of relation R such that `x R x` holds.
@@ -24,12 +36,11 @@ const reflexive = '\Fun\reflexive';
  * @psalm-pure
  * @template T
  * @param callable(T, T):bool $op
- * @param T $x
- * @return bool
+ * @psalm-return callable(T): bool
  */
-function reflexive($op, $x): bool
+function reflexive($op): callable
 {
-    return $op($x, $x) === true;
+    return fn ($x): bool => $op($x, $x) === true;
 }
 
 /**
@@ -41,13 +52,12 @@ const symmetric = '\Fun\symmetric';
  * Tests symmetry of relation R such that `x R y` and `y R x` hold.
  *
  * @template T
- * @param callable(T, T):bool $op,
- * @param T $x
- * @param T $y
+ * @param callable(T, T):bool $op
+ * @return callable(T, T):bool
  */
-function symmetric($op, $x, $y): bool
+function symmetric($op): callable
 {
-    return $op($x, $y) === $op($y, $x);
+    return fn ($x, $y) => $op($x, $y) === $op($y, $x);
 }
 
 /**
@@ -61,13 +71,10 @@ const transitive = '\Fun\transitive';
  * I.e if `x R y` and `y R z`, then `x R z`
  *
  * @template T
- * @param callable(T, T):bool $op
- * @param T $x
- * @param T $y
- * @param T $z
- * @return bool
+ * @param callable(T, T, T):bool $op
+ * @return callable(T, T, T):bool
  */
-function transitive($op, $x, $y, $z): bool
+function transitive($op): callable
 {
-    return ($op($x, $y) && $op($y, $z)) === $op($x, $z);
+    return fn ($x, $y, $z) => ($op($x, $y) && $op($y, $z)) === $op($x, $z);
 }
