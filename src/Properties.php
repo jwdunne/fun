@@ -11,14 +11,9 @@
 namespace Fun;
 
 /**
- * @const callable
- */
-const reflexive = '\Fun\reflexive';
-
-/**
  * Negates a property
  *
- * TODO: I don't like this...
+ * FIXME: I don't like this...
  *
  * @psalm-pure
  * @template T
@@ -29,6 +24,11 @@ function neg($op): callable
 {
     return fn (...$args) => !$op(...$args);
 }
+
+/**
+ * @const callable
+ */
+const reflexive = '\Fun\reflexive';
 
 /**
  * Tests reflexivity of relation R such that `x R x` holds.
@@ -68,7 +68,7 @@ const transitive = '\Fun\transitive';
 /**
  * Tests transitivity of relation R
  *
- * I.e if `x R y` and `y R z`, then `x R z`
+ * I.e `(x R y ∧ y R z) ⇒ x R z`
  *
  * @template T
  * @param callable(T, T, T):bool $op
@@ -76,5 +76,5 @@ const transitive = '\Fun\transitive';
  */
 function transitive($op): callable
 {
-    return fn ($x, $y, $z) => ($op($x, $y) && $op($y, $z)) === $op($x, $z);
+    return fn ($x, $y, $z) => !($op($x, $y) && $op($y, $z)) || $op($x, $z);
 }

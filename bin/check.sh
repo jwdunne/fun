@@ -3,14 +3,6 @@
 set -eu
 
 echo "===================="
-echo "= Type Checking    ="
-echo "===================="
-echo ""
-php vendor/bin/psalm
-echo ""
-echo ""
-
-echo "===================="
 echo "= Linting          ="
 echo "===================="
 echo ""

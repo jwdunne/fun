@@ -7,8 +7,8 @@ Functional programming utility belt for PHP.
 ### Relations & Properties
 
 - [ ] Implement properties
-  - [ ] Test `symmetric` property
-  - [ ] Test `transitive` property
+  - [x] Test `symmetric` property
+  - [x] Test `transitive` property
   - [ ] Implement `irreflexive` property
   - [ ] Implement `antisymmetric`
 - [ ] Implement `eq` tests
