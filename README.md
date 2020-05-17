@@ -16,7 +16,8 @@ Functional programming utility belt for PHP.
 - [ ] Implement properties
   - [x] Test `symmetric` property
   - [x] Test `transitive` property
-  - [ ] Implement `irreflexive` property
+  - [x] Implement `irreflexive` property
+  - [x] Test `irreflexive` property
   - [ ] Implement `antisymmetric`
 - [x] Implement `eq` tests
 - [x] Implement `Relations` module
@@ -38,6 +39,7 @@ Functional programming utility belt for PHP.
 - [ ] Implement `Pair` type
 - [x] Implement `Ord` type
 - [ ] Implement `Boolean` type
+- [ ] Implement `Filterable` type
 - [ ] Implement useful instances of `Eq`
 - [ ] Implement useful instances of `Ord`
 - [ ] Implement `Semigroup` type
@@ -48,10 +50,13 @@ Functional programming utility belt for PHP.
 
 ### Functions
 
-- [ ] Implement `map` in terms of `Functor`
+- [ ] Implement `Functor` functions
+  - [ ] Implement `map`
 - [ ] Implement `filter`
 - [ ] Implement `reject`
 - [ ] Implement `foldl`
 - [ ] Implement `foldr`
+- [ ] Implement `head`, `tail`, `first`
+- [ ]
 
 > This list is a work-in-progress
