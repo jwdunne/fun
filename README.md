@@ -125,14 +125,14 @@ In fact, all of Fun's code, where warranted, is tested this way!
 
 - [ ] Implement properties
   - [x] Test `symmetric` property
-  - [ ] Document `symmetric` property
   - [x] Test `transitive` property
-  - [ ] Document `transitive` property
   - [x] Implement `irreflexive` property
   - [x] Test `irreflexive` property
-  - [ ] Document `irreflexive` property
   - [x] Implement `antisymmetric`
   - [x] Test `antisymmetric` property
+  - [ ] Document `symmetric` property
+  - [ ] Document `transitive` property
+  - [ ] Document `irreflexive` property
   - [ ] Document `antisymmetric` property
 - [ ] Implement laws
   - [ ] Implement `monoid_laws`
@@ -147,73 +147,73 @@ In fact, all of Fun's code, where warranted, is tested this way!
 - [x] Document `eq`
 - [x] Document `neq`
 - [ ] Document `Operators`
-  - [ ] Implement `Ord` operators
+  - [ ] Complete `Ord` operators
     - [ ] Complete `lt`
+      - [ ] Document `lt`
       - [ ] Implement `lt`
       - [ ] Test `lt`
-      - [ ] Document `lt`
     - [ ] Complete `lte`
+      - [ ] Document `lte`
       - [ ] Implement `lte`
       - [ ] Test `lte`
-      - [ ] Document `lte`
     - [ ] Complete `gt`
+      - [ ] Document `gt`
       - [ ] Implement `gt`
       - [ ] Test `gt`
-      - [ ] Document `gt`
     - [ ] Complete `gte`
+      - [ ] Document `gte`
       - [ ] Implement `gte`
       - [ ] Test `gte`
-      - [ ] Document `gte`
     - [ ] Complete `min`
+      - [ ] Document `min`
       - [ ] Implement `min`
       - [ ] Test `min`
-      - [ ] Document `min`
     - [ ] Complete `max`
+      - [ ] Document `max`
       - [ ] Implement `max`
       - [ ] Test `max`
-      - [ ] Document `max`
     - [ ] Complete `compare`
+      - [ ] Document `compare`
       - [ ] Implement `compare`
       - [ ] Test `compare`
-      - [ ] Implement `compare`
   - [ ] Complete `Boolean` operators
     - [ ] Complete `boolean`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `_and`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `_or`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `_not`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `_if`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `when`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `unless`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `complement`
+      - [ ] Document
       - [x] Implement
       - [ ] Test
-      - [ ] Document
   - [ ] Implement `Set` operators
     - [ ] Complete `subset`
+      - [ ] Document
       - [ ] Implement
       - [ ] Test
-      - [ ] Document
     - [ ] Complete `union`
     - [ ] Complete `intersect`
   - [ ] Implement `Numeric` operators
