@@ -145,7 +145,7 @@ In fact, all of Fun's code, where warranted, is tested this way!
 - [x] Refactor `eq` to `Relations`
 - [x] Rename `Relations` to `Operators`
 - [x] Document `eq`
-- [ ] Document `neq`
+- [x] Document `neq`
 - [ ] Document `Operators`
   - [ ] Implement `Ord` operators
     - [ ] Complete `lt`
