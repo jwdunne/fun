@@ -18,7 +18,8 @@ Functional programming utility belt for PHP.
   - [x] Test `transitive` property
   - [x] Implement `irreflexive` property
   - [x] Test `irreflexive` property
-  - [ ] Implement `antisymmetric`
+  - [x] Implement `antisymmetric`
+  - [x] Test `antisymmetric` property
 - [x] Implement `eq` tests
 - [x] Implement `Relations` module
 - [x] Refactor `eq` to `Relations`
