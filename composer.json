@@ -6,12 +6,9 @@
     "php": "^7.4"
   },
   "require-dev": {
-    "vimeo/psalm": "dev-master",
-    "squizlabs/php_codesniffer": "^3.5",
     "infection/infection": "^0.16.3",
-    "steos/quickcheck": "dev-fix/phpunit-9",
-    "psy/psysh": "^0.10.4",
-    "phpunit/phpunit": "^9.1"
+    "steos/quickcheck": "dev-master",
+    "psy/psysh": "^0.10.4"
   },
   "autoload": {
     "files": [

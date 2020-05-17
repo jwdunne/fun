@@ -1,7 +1,10 @@
 /vendor/
+/tools
+/.vscode
+/coverage
+/build
 composer.lock
 infection.log
-.vscode
 .phpunit.result.cache
 .DS_Store
-coverage
+.python-version

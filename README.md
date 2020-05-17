@@ -22,7 +22,8 @@ Functional programming utility belt for PHP.
   - [ ] `max`
   - [ ] `compare`
 - [ ] Consider FantasyLand compatibility
-- [ ] Research how modern, popular packages generate docs
+- [x] Research how modern, popular packages generate docs
+  - [ ] Set up Sphinx and ReadTheDocs
 - [ ] Consider using Haskell type defintions
 - [ ] Consider refactoring relations in terms of a single primitive of that type
 - [ ] Design a way to compose properties into laws.
@@ -41,7 +42,8 @@ Functional programming utility belt for PHP.
   - [ ] Module
   - [ ] Vector
   - [ ] Vector Space
-- [ ] Consider move to Phive for tooling
+- [x] Consider move to Phive for tooling
+- [ ] Implement GitHub Actions CI
 
 ### Properties & Laws
 
@@ -129,6 +131,13 @@ Functional programming utility belt for PHP.
       - [x] Implement
       - [ ] Test
       - [ ] Document
+  - [ ] Implement `Set` relations
+    - [ ] Complete `subset`
+      - [ ] Implement
+      - [ ] Test
+      - [ ] Document
+    - [ ] Complete `union`
+    - [ ] Complete `
 
 ### Data Types
 
@@ -147,6 +156,7 @@ Functional programming utility belt for PHP.
 - [ ] Implement `Numeric` type
 - [ ] Implement `Integer` subtype of `Numeric`?
 - [ ] Implement `Rational` type
+- [ ] Implement `Set` type
 - [ ] Implement traits that implement these types based on one method
   - [ ] Implement `Equatable` trait
   - [ ] Implement `Orderable` trait
