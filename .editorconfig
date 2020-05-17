@@ -12,5 +12,5 @@ insert_final_newline = true
 [*.neon]
 indent_size = 2
 
-[*.md]
+[*.md,*.rst]
 indent_size = 2

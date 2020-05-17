@@ -143,8 +143,9 @@ In fact, all of Fun's code, where warranted, is tested this way!
 - [x] Implement `eq` tests
 - [x] Implement `Relations` module
 - [x] Refactor `eq` to `Relations`
-- [ ] Rename `Relations` to `Operators`
-- [ ] Document `eq`
+- [x] Rename `Relations` to `Operators`
+- [x] Document `eq`
+- [ ] Document `neq`
 - [ ] Document `Operators`
   - [ ] Implement `Ord` operators
     - [ ] Complete `lt`

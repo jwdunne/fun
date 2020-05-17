@@ -3,12 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Fun's documentation!
-===============================
+Fun: Functional Programming in PHP
+==================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   tutorials.rst
+   types.rst
+   properties.rst
+   operators.rst
 
 Fun is a comprehnsive functional programming toolkit for PHP.
 
