@@ -138,14 +138,15 @@ In fact, all of Fun's code, where warranted, is tested this way!
   - [ ] Implement `monoid_laws`
   - [ ] Implement `setoid_laws`
 
-### Binary Relations
+### Operators
 
 - [x] Implement `eq` tests
 - [x] Implement `Relations` module
 - [x] Refactor `eq` to `Relations`
+- [ ] Rename `Relations` to `Operators`
 - [ ] Document `eq`
-- [ ] Document `Relations`
-  - [ ] Implement `Ord` relations
+- [ ] Document `Operators`
+  - [ ] Implement `Ord` operators
     - [ ] Complete `lt`
       - [ ] Implement `lt`
       - [ ] Test `lt`
@@ -174,7 +175,7 @@ In fact, all of Fun's code, where warranted, is tested this way!
       - [ ] Implement `compare`
       - [ ] Test `compare`
       - [ ] Implement `compare`
-  - [ ] Complete `Boolean` relations
+  - [ ] Complete `Boolean` operators
     - [ ] Complete `boolean`
       - [ ] Implement
       - [ ] Test
@@ -207,13 +208,22 @@ In fact, all of Fun's code, where warranted, is tested this way!
       - [x] Implement
       - [ ] Test
       - [ ] Document
-  - [ ] Implement `Set` relations
+  - [ ] Implement `Set` operators
     - [ ] Complete `subset`
       - [ ] Implement
       - [ ] Test
       - [ ] Document
     - [ ] Complete `union`
-    - [ ] Complete `
+    - [ ] Complete `intersect`
+  - [ ] Implement `Numeric` operators
+    - [ ] Implement `add`
+    - [ ] Implement `sub`
+    - [ ] Implement `negate`
+    - [ ] Implement `sum`
+    - [ ] Implement `product`
+    - [ ] Implement `mul`
+    - [ ] Implement `div`
+    - [ ] Implement `power`
 
 ### Data Types
 
@@ -261,14 +271,5 @@ In fact, all of Fun's code, where warranted, is tested this way!
   - [ ] Implement `snd`
   - [ ] Implement `thrd`
   - [ ] Implement `swap`
-- [ ] Implement `Numeric` functions
-  - [ ] Implement `add`
-  - [ ] Implement `sub`
-  - [ ] Implement `negate`
-  - [ ] Implement `sum`
-  - [ ] Implement `product`
-  - [ ] Implement `mul`
-  - [ ] Implement `div`
-  - [ ] Implement `power`
 
 > This list is a work-in-progress

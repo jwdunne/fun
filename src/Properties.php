@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * A set of useful properties for verifying operations and relations.
  *

@@ -14,7 +14,7 @@
     "files": [
       "src/Fun.php",
       "src/Properties.php",
-      "src/Relations.php"
+      "src/Operators.php"
     ],
     "psr-4": {
       "Fun\\": "src/"
