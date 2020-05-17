@@ -1,5 +1,7 @@
 # Fun
 
+[![Documentation Status](https://readthedocs.org/projects/fun-php/badge/?version=latest)](https://fun-php.readthedocs.io/en/latest/?badge=latest)
+
 Functional programming utility belt for PHP.
 
 ## Project Goals
