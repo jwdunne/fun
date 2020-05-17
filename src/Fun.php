@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Fun functional programming utility belt.
+ *
+ * @package Fun
+ */
+
 namespace Fun;
 
 /**

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * A collection of useful, generic binary relations.
+ *
+ * You can use both function and constant. You can use the constant form to
+ * conveniently pass the function as a value.
+ *
+ * @package Fun
+ */
+
 namespace Fun;
 
 use Fun\Types\Eq;
