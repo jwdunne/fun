@@ -7,7 +7,9 @@ use PHPUnit\Framework\TestCase;
 use QuickCheck\PHPUnit\PropertyConstraint;
 use QuickCheck\Property;
 
-use function Fun\neg;
+use function Fun\accept_tuple;
+use function Fun\antisymmetric;
+use function Fun\irreflexive;
 use function Fun\reflexive;
 use function Fun\symmetric;
 use function Fun\transitive;
@@ -21,54 +23,56 @@ class PropertiesTest extends TestCase
     {
         return [
             'eq' => fn ($x, $y) => $x === $y,
-            'lt' => fn ($x, $y) => $x > $y
+            'lt' => fn ($x, $y) => $x > $y,
+            'neq' => fn ($x, $y) => $x !== $y
         ];
     }
 
     public function test_reflexive()
     {
-        ['eq' => $eq, 'lt' => $lt] = $this->ops();
+        ['eq' => $eq] = $this->ops();
 
         // = is reflexive
         $this->assertThat(
-            Property::forAll(
-                [Gen::ints()],
-                reflexive($eq)
-            ),
+            Property::forAll([Gen::ints()], reflexive($eq)),
             PropertyConstraint::check()
         );
+    }
+
+    public function test_irreflexive()
+    {
+        ['lt' => $lt] = $this->ops();
 
         // < is not reflexive
         $this->assertThat(
-            Property::forAll(
-                [Gen::ints()],
-                neg(reflexive($lt))
-            ),
+            Property::forAll([Gen::ints()], irreflexive($lt)),
             PropertyConstraint::check(100)
         );
     }
 
     public function test_symmetric()
     {
-        ['eq' => $eq, 'lt' => $lt] = $this->ops();
+        ['eq' => $eq] = $this->ops();
 
         // = is symmetric
         $this->assertThat(
-            Property::forAll(
-                [Gen::ints(), Gen::ints()],
-                symmetric($eq)
-            ),
+            Property::forAll([Gen::ints(), Gen::ints()], symmetric($eq)),
             PropertyConstraint::check(100)
         );
+    }
 
-        // < is not symmetric unless x = y
+    public function test_antisymmetric()
+    {
+        ['lt' => $lt, 'neq' => $neq] = $this->ops();
+
+        // < is antisymmetric unless x = y
         $this->assertThat(
             Property::forAll(
                 [
                     Gen::tuples(Gen::ints(), Gen::ints())
-                        ->suchThat(fn ($xs) => $xs[0] !== $xs[1]),
+                        ->suchThat(accept_tuple($neq)),
                 ],
-                fn ($xs) => neg(symmetric($lt))(...$xs)
+                accept_tuple(antisymmetric($lt))
             ),
             PropertyConstraint::check(100)
         );
@@ -79,9 +83,6 @@ class PropertiesTest extends TestCase
         ['eq' => $eq, 'lt' => $lt] = $this->ops();
 
         // = is transitive
-        $this->assertTrue(transitive($lt)(1, 2, 3));
-        $this->assertTrue(transitive($lt)(3, 2, 1));
-
         $this->assertThat(
             Property::forAll(
                 [Gen::ints(), Gen::ints(), Gen::ints()],

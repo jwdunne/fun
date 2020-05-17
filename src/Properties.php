@@ -25,7 +25,7 @@ const neg = '\Fun\neg';
  * @param callable(...T):bool $op
  * @return callable(...T):bool
  */
-function neg($op): callable
+function complement($op): callable
 {
     return fn (...$args) => !$op(...$args);
 }
@@ -63,7 +63,7 @@ const irreflexive = '\Fun\irreflexive';
  */
 function irreflexive($op): callable
 {
-    return neg(reflexive($op));
+    return complement(reflexive($op));
 }
 
 /**
@@ -78,9 +78,29 @@ const symmetric = '\Fun\symmetric';
  * @param callable(T, T):bool $op
  * @return callable(T, T):bool
  */
-function symmetric($op): callable
+function symmetric(callable $op): callable
 {
     return fn ($x, $y) => $op($x, $y) === $op($y, $x);
+}
+
+/**
+ * @const callable
+ */
+const antisymmetric = '\Fun\antisymmetric';
+
+/**
+ * Tests antisymmetry of relation R.
+ *
+ * Antisymmetry is defined such that there exists some `x`, `y` and a binary
+ * relation `R` where `x R y AND y R x` do not hold.
+ *
+ * @template T
+ * @param callable(T, T):bool $op
+ * @return callable(T, T):bool
+ */
+function antisymmetric(callable $op): callable
+{
+    return complement(symmetric($op));
 }
 
 /**
