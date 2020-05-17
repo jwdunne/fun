@@ -9,9 +9,9 @@ namespace Fun\Types;
  */
 interface Ord extends Eq
 {
-    public const LT = 'lt';
-    public const GT = 'lt';
-    public const EQ = 'eq';
+    public const LT = -1;
+    public const GT = 1;
+    public const EQ = 0;
 
     /**
      * Returns static::LT, static::GT or static::EQ
