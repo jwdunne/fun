@@ -20,12 +20,13 @@ Functional programming utility belt for PHP.
   - [ ] `gte`
   - [ ] `min`
   - [ ] `max`
+  - [ ] `compare`
 - [ ] Consider FantasyLand compatibility
 - [ ] Research how modern, popular packages generate docs
 - [ ] Consider using Haskell type defintions
 - [ ] Consider refactoring relations in terms of a single primitive of that type
 - [ ] Design a way to compose properties into laws.
-- [ ] Build a list of laws for each algebraic structure
+- [ ] Build a list of laws for each algebraic structure / type
   - [ ] Monoid
   - [ ] Ord
   - [ ] Eq / Setoid
@@ -40,6 +41,7 @@ Functional programming utility belt for PHP.
   - [ ] Module
   - [ ] Vector
   - [ ] Vector Space
+- [ ] Consider move to Phive for tooling
 
 ### Properties & Laws
 
