@@ -10,7 +10,12 @@ Welcome to Fun's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+Fun is a comprehnsive functional programming toolkit for PHP.
 
+Getting Started
+===============
+
+- TODO: Insert getting started instructions here
 
 Indices and tables
 ==================
