@@ -2,10 +2,10 @@ SHELL = /bin/sh
 
 .PHONY: test check info tools
 
-test: tools
+test: tools vendor
 	./tools/phpunit
 
-check: tools
+check: tools vendor
 	./tools/phpcs
 	./tools/psalm
 
