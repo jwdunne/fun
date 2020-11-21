@@ -12,6 +12,12 @@ Fun aims to:
 - Smooth PHP's inconsistent standard library so it's easy to recall
 - Interoperate seamlessly with PHP's types
 
+## How it works
+
+Fun implements a consistent and functional veneer over PHP's own standard
+library. The end product is a suite of useful functions you can use in your own
+work.
+
 ## Getting Started
 
 Run:
@@ -29,6 +35,11 @@ use const Fun\_and;
 
 echo foldl(_and, true, [true, true, true]); // === true
 ```
+
+## Getting Help
+
+This is still an early release project. I, @jwdunne, would appreciate any
+feedback. All bug reports, feature requests and pull requests considered.
 
 ## Roadmap for v0.1.0
 
