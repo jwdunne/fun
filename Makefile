@@ -10,7 +10,7 @@ check: tools
 	./tools/psalm
 
 info: tools
-	./tools/phploc
+	./tools/phploc src
 
 tools: phive.xml
 	phive install
