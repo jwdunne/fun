@@ -1,12 +1,11 @@
 language: php
 
 php:
-  - 7.4snapshot
+  - 7.4
   - nightly
 
 matrix:
   allow_failures:
-    - php: 7.4snapshot
     - php: nightly
 
 env:
