@@ -16,7 +16,7 @@ info: tools
 	./tools/phploc src
 
 tools: phive.xml
-	phive install
+	phive install --trust-gpg-keys
 
 vendor: composer.lock
 	composer install
