@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * A collection of useful, generic binary relations.
  *
@@ -10,6 +8,8 @@ declare(strict_types=1);
  *
  * @package Fun
  */
+
+declare(strict_types=1);
 
 namespace Fun;
 
@@ -26,10 +26,11 @@ const eq = '\Fun\eq';
  *
  * Supports instances of type Eq as well as scalars and arrays.
  *
- * @psalm-type Equal=scalar|array|Eq
+ * @template T
+ * @template U
  * @psalm-pure
- * @param Equal $a
- * @param Equal $b
+ * @param T $a
+ * @param U $b
  * @return bool
  */
 function eq($a, $b)

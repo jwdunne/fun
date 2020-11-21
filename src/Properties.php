@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * A set of useful properties for verifying operations and relations.
  *
@@ -9,6 +7,8 @@ declare(strict_types=1);
  * property holds. For example, if R is a binary relation with property P over
  * any two sets X, Y, then P(R, x in X, y in Y) regardless of R(x, y).
  */
+
+declare(strict_types=1);
 
 namespace Fun;
 
@@ -116,7 +116,7 @@ const transitive = '\Fun\transitive';
  * I.e `(x R y ∧ y R z) ⇒ x R z`
  *
  * @template T
- * @param callable(T, T, T):bool $op
+ * @param callable(T, T):bool $op
  * @return callable(T, T, T):bool
  */
 function transitive($op): callable

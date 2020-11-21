@@ -7,7 +7,6 @@
   },
   "require-dev": {
     "infection/infection": "^0.16.3",
-    "steos/quickcheck": "dev-master",
     "psy/psysh": "^0.10.4"
   },
   "autoload": {

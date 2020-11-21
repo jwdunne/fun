@@ -1,12 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 /**
  * Fun functional programming utility belt.
  *
  * @package Fun
  */
+
+declare(strict_types=1);
 
 namespace Fun;
 
@@ -26,20 +26,6 @@ const id = '\Fun\id';
 function id($x)
 {
     return $x;
-}
-
-/**
- * Take two functions $x and $y and return ($x . $y)
- *
- * Remark: Not sure if I like the variadic arguments.
- *
- * @param callable $x
- * @param callable $y
- * @return callable
- */
-function compose(callable $x, callable $y): callable
-{
-    return fn (...$args) => $x($y(...$args));
 }
 
 /**
