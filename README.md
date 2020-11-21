@@ -45,16 +45,101 @@ feedback. All bug reports, feature requests and pull requests considered.
 
 ### Project Planning
 
+Each `Build` task must:
+
+- [ ] Specify the function
+- [ ] Test the function
+- [ ] Document the function
+- [ ] Implement the function
+
 #### Functions
 
-##### Seq
+##### Strings
 
-- [ ] Implement `map`
-- [ ] Implement `filter`
-- [ ] Implement `foldl`
-- [ ] Implement `foldr`
+Nice to have:
 
-##### String
+- [ ] Build `Str\to_upper`
+- [ ] Build `Str\to_lower`
+- [ ] Build `Str\capitalize`
+
+##### Arrays
+
+Must have:
+
+- [ ] Build `Arr\join`
+- [ ] Build `Arr\flatten`
+- [ ] Build `Arr\flat_map`
+- [ ] Build `Arr\group_by`
+- [ ] Build `Arr\every`
+- [ ] Build `Arr\any`
+- [ ] Build `Arr\zip`
+- [ ] Build `Arr\unzip`
+
+Nice to have:
+
+- [ ] Build `Arr\reject`
+- [ ] Build `Arr\chunk`
+- [ ] Build `Arr\sum`
+- [ ] Build `Arr\product`
+- [ ] Build `Arr\concat`
+- [ ] Build `Arr\avg`
+- [ ] Build `Arr\none`
+- [ ] Build `Arr\is_proper`
+- [ ] Build `Arr\to_proper`
+- [ ] Build `Arr\length`
+- [ ] Build `Arr\map_on`
+- [ ] Build `Arr\filter_on`
+- [ ] Build `Arr\reject_on`
+- [ ] Build `Arr\partition`
+
+##### Maps
+
+Must have:
+
+- [ ] Build `Map\get`
+- [ ] Build `Map\put`
+- [ ] Build `Map\has`
+- [ ] Build `Map\del`
+- [ ] Build `Map\contains`
+- [ ] Build `Map\merge`
+- [ ] Build `Map\keys`
+- [ ] Build `Map\values`
+- [ ] Build `Map\exclude`
+- [ ] Build `Map\pick`
+- [ ] Build `Map\to_pairs`
+- [ ] Build `Map\from_pairs`
+
+Nice to have:
+
+- [ ] Build `Map\has_shape`
+- [ ] Build `Map\assert_shape`
+- [ ] Build `Map\intersect`
+- [ ] Build `Map\rename`
+- [ ] Build `Map\is_proper`
+- [ ] Build `Map\view`
+- [ ] Build `Map\normalize`
+- [ ] Build `Map\shape`
+- [ ] Build `Map\if_has`
+- [ ] Build `Map\if_contains`
+- [ ] Build `Map\tabulate`
+- [ ] Build `Map\to_json`
+- [ ] Build `Map\to_yaml`
+- [ ] Build `Map\get_in`
+- [ ] Build `Map\put_in`
+
+##### Sets
+
+- [ ] Build `Set\union`
+- [ ] Build `Set\intersect`
+- [ ] Build `Set\difference`
+- [ ] Build `Set\symmetric_difference`
+- [ ] Build `Set\contains`
+- [ ] Build `Set\if_contains`
+- [ ] Build `Set\put`
+- [ ] Build `Set\is_subset`
+- [ ] Build `Set\is_proper_subset`
+- [ ] Build `Set\from_map`
+- [ ] Build `Set\from_arr`
 
 ##### Operators
 
