@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         backupGlobals="false"
-         beStrictAboutCoversAnnotation="true"
-         beStrictAboutOutputDuringTests="true"
-         beStrictAboutTestsThatDoNotTestAnything="false"
-         beStrictAboutTodoAnnotatedTests="true"
-         colors="true"
-         verbose="true"
-         executionOrder="default"
->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd" bootstrap="vendor/autoload.php" backupGlobals="false" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTestsThatDoNotTestAnything="false" beStrictAboutTodoAnnotatedTests="true" colors="true" verbose="true" executionOrder="default">
     <testsuites>
         <testsuite name="fun">
             <directory>tests</directory>
@@ -24,10 +13,10 @@
     </filter>
 
     <logging>
-        <log type="coverage-html" target="/tmp/report" lowUpperBound="35" highLowerBound="70"/>
-        <log type="coverage-clover" target="./coverage/coverage-xml/index.xml"/>
-        <log type="coverage-php" target="./coverage/coverage-serialized"/>
-        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
-        <log type="junit" target="./coverage/junit.xml"/>
+        <log type="coverage-html" target="/tmp/report" lowUpperBound="35" highLowerBound="70" />
+        <log type="coverage-clover" target="./coverage/coverage-xml/index.xml" />
+        <log type="coverage-php" target="./coverage/coverage-serialized" />
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true" />
+        <log type="junit" target="./coverage/junit.xml" />
     </logging>
 </phpunit>

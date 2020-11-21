@@ -10,17 +10,18 @@ Fun: Functional Programming in PHP
    :maxdepth: 2
    :caption: Contents:
 
-   tutorials.rst
-   types.rst
-   properties.rst
-   operators.rst
+   tutorials/index.rst
+   how-to/index.rst
+   reference/index.rst
 
-Fun is a comprehnsive functional programming toolkit for PHP.
+Fun makes it easier to write functional code in PHP.
 
 Getting Started
 ===============
 
 - TODO: Insert getting started instructions here
+
+
 
 Indices and tables
 ==================

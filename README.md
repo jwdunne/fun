@@ -26,7 +26,7 @@ use function Fun\foldl;
 
 use const Fun\_and;
 
-echo foldl(_and, true, [true, true, true]) // === true
+echo foldl(_and, true, [true, true, true]); // === true
 ```
 
 You can also integrate your own code with Fun's datatypes. Fun's functions will
@@ -87,190 +87,43 @@ In fact, all of Fun's code, where warranted, is tested this way!
 
 ### Project Planning
 
-- [ ] Consider reducing the scope of the project for v0.1.0
-- [ ] Consider moving to GitHub for managing this document
-- [ ] List unimplemented properties for:
-  - [ ] `lt`
-  - [ ] `lte`
-  - [ ] `gt`
-  - [ ] `gte`
-  - [ ] `min`
-  - [ ] `max`
-  - [ ] `compare`
-- [ ] Consider FantasyLand compatibility
-- [x] Research how modern, popular packages generate docs
-  - [x] Set up Sphinx and ReadTheDocs
-- [ ] Consider using Haskell type defintions
-- [ ] Consider refactoring relations in terms of a single primitive of that type
-- [ ] Design a way to compose properties into laws.
-- [ ] Build a list of laws for each algebraic structure / type
-  - [ ] Monoid
-  - [ ] Ord
-  - [ ] Eq / Setoid
-  - [ ] Boolean
-  - [ ] Filterable
-  - [ ] Monad
-  - [ ] Functor
-  - [ ] Category
-  - [ ] Group
-  - [ ] Ring
-  - [ ] Field
-  - [ ] Module
-  - [ ] Vector
-  - [ ] Vector Space
-- [x] Consider move to Phive for tooling
-- [ ] Implement GitHub Actions CI
+#### Functions
 
-### Properties & Laws
+##### Seq
 
-- [ ] Implement properties
-  - [x] Test `symmetric` property
-  - [x] Test `transitive` property
-  - [x] Implement `irreflexive` property
-  - [x] Test `irreflexive` property
-  - [x] Implement `antisymmetric`
-  - [x] Test `antisymmetric` property
-  - [ ] Document `symmetric` property
-  - [ ] Document `transitive` property
-  - [ ] Document `irreflexive` property
-  - [ ] Document `antisymmetric` property
-- [ ] Implement laws
-  - [ ] Implement `monoid_laws`
-  - [ ] Implement `setoid_laws`
+- [ ] Implement `map`
+- [ ] Implement `filter`
+- [ ] Implement `foldl`
+- [ ] Implement `foldr`
 
-### Operators
+##### Operators
 
-- [x] Implement `eq` tests
-- [x] Implement `Relations` module
-- [x] Refactor `eq` to `Relations`
-- [x] Rename `Relations` to `Operators`
-- [x] Document `eq`
-- [x] Document `neq`
-- [ ] Document `Operators`
-  - [ ] Complete `Ord` operators
-    - [ ] Complete `lt`
-      - [ ] Document `lt`
-      - [ ] Implement `lt`
-      - [ ] Test `lt`
-    - [ ] Complete `lte`
-      - [ ] Document `lte`
-      - [ ] Implement `lte`
-      - [ ] Test `lte`
-    - [ ] Complete `gt`
-      - [ ] Document `gt`
-      - [ ] Implement `gt`
-      - [ ] Test `gt`
-    - [ ] Complete `gte`
-      - [ ] Document `gte`
-      - [ ] Implement `gte`
-      - [ ] Test `gte`
-    - [ ] Complete `min`
-      - [ ] Document `min`
-      - [ ] Implement `min`
-      - [ ] Test `min`
-    - [ ] Complete `max`
-      - [ ] Document `max`
-      - [ ] Implement `max`
-      - [ ] Test `max`
-    - [ ] Complete `compare`
-      - [ ] Document `compare`
-      - [ ] Implement `compare`
-      - [ ] Test `compare`
-  - [ ] Complete `Boolean` operators
-    - [ ] Complete `boolean`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `_and`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `_or`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `_not`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `_if`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `when`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `unless`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `complement`
-      - [ ] Document
-      - [x] Implement
-      - [ ] Test
-  - [ ] Implement `Set` operators
-    - [ ] Complete `subset`
-      - [ ] Document
-      - [ ] Implement
-      - [ ] Test
-    - [ ] Complete `union`
-    - [ ] Complete `intersect`
-  - [ ] Implement `Numeric` operators
-    - [ ] Implement `add`
-    - [ ] Implement `sub`
-    - [ ] Implement `negate`
-    - [ ] Implement `sum`
-    - [ ] Implement `product`
-    - [ ] Implement `mul`
-    - [ ] Implement `div`
-    - [ ] Implement `power`
+###### Logical Operators
 
-### Data Types
+- [x] Implement `eq`
+- [x] Implement `neq`
+- [x] Implement `lt`
+- [x] Implement `lte`
+- [x] Implement `gt`
+- [x] Implement `gte`
+- [x] Implement `max`
+- [x] Implement `min`
+- [x] Implement `compare`
+- [ ] Implement `_and`
+- [ ] Implement `_or`
+- [ ] Implement `_not`
+- [ ] Implement `_xor`
+- [ ] Implement `_if`
+- [ ] Implement `unless`
+- [ ] Implement `when`
 
-- [ ] Implement `Pair` type
-- [x] Implement `Ord` type
-- [ ] Improve types of `Ord` and `Eq`
-- [ ] Implement `Boolean` type
-- [ ] Implement `Filterable` type
-- [ ] Implement useful instances of `Eq`
-- [ ] Implement useful instances of `Ord`
-- [ ] Implement `Semigroup` type
-- [ ] Implement `Monoid` type
-- [ ] Implement `Foldable` type
-- [ ] Implement `Functor` type
-- [ ] Implement `Monad` type
-- [ ] Implement `Numeric` type
-- [ ] Implement `Integer` subtype of `Numeric`?
-- [ ] Implement `Rational` type
-- [ ] Implement `Set` type
-- [ ] Implement traits that implement these types based on one method
-  - [ ] Implement `Equatable` trait
-  - [ ] Implement `Orderable` trait
-- [ ] Simplify definitions of Ord and Eq.
+###### Numerical Operators
 
-### Functions
-
-- [ ] Implement `Functor` functions
-  - [ ] Implement `map`
-- [ ] Implement `Filterable` functions
-  - [ ] Implement `filter`
-  - [ ] Implement `reject`
-- [ ] Implement `Foldable` functions
-  - [ ] Implement `foldl`
-  - [ ] Implement `foldr`
-- [ ] Implement `_List` functions
-  - [ ] Implement `_list`
-  - [ ] Implement `head`
-  - [ ] Implement `tail`
-  - [ ] Implement `last`
-- [ ] Implement `Tuple` functions
-  - [ ] Implement `pair`
-  - [ ] Implement `triple`
-  - [ ] Implement `tuple`
-  - [ ] Implement `fst`
-  - [ ] Implement `snd`
-  - [ ] Implement `thrd`
-  - [ ] Implement `swap`
-
-> This list is a work-in-progress
+- [ ] Implement `add`
+- [ ] Implement `sub`
+- [ ] Implement `negate`
+- [ ] Implement `sum`
+- [ ] Implement `product`
+- [ ] Implement `mul`
+- [ ] Implement `div`
+- [ ] Implement `power`
