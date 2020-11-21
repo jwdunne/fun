@@ -1,6 +1,9 @@
 SHELL = /bin/sh
 
-.PHONY: test check info tools
+.PHONY: test check info tools watch
+
+watch: tools vendor
+	php vendor/bin/phpunit-watcher watch
 
 test: tools vendor
 	./tools/phpunit
