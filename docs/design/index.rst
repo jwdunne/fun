@@ -149,6 +149,21 @@ or uses a HTTP client.
 return data in maps. Even if objects are used, it is common to support access a
 la hash map.
 
+Entry-points:
+
+- In response to user input
+- In response to a webhook
+- In response to a scheduled task
+
+Examples:
+
+1. Leadflo REST API endpoint for actions due
+2. Leadflo REST API endpoint for saving a patient
+3. Leadflo REST API endpoint for listening on tx type changes
+4. IAS Stripe integration on subscription
+5. IAS Stripe integration on payment failure
+6. IAS Stripe integration on payment success
+
 Template rendering
 ------------------
 
