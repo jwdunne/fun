@@ -111,6 +111,9 @@ As such, PHP is typically used to:
 10.  Transforming received values from 3rd party APIs to internal
      representations.
 11.  Validating and sanitising values read from 3rd party APIs
+12.  Writing tests that interact with DB
+13.  Writing tests that stub and fake 3rd party services
+14.  Writing tests that verify data structures
 
 We can reduce these use cases to:
 
