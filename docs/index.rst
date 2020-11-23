@@ -13,6 +13,7 @@ Fun: Functional Programming in PHP
    tutorials/index.rst
    how-to/index.rst
    reference/index.rst
+   design/index.rst
 
 Fun makes it easier to write functional code in PHP.
 
@@ -21,7 +22,10 @@ Getting Started
 
 - TODO: Insert getting started instructions here
 
+Installation
+------------
 
+- TODO: Insert installation instructions here
 
 Indices and tables
 ==================

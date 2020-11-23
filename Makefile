@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 
-.PHONY: test check info tools watch
+.PHONY: test check info tools watch docs
 
 watch: tools vendor
 	php vendor/bin/phpunit-watcher watch
@@ -23,3 +23,6 @@ vendor: composer.lock
 
 composer.lock: composer.json
 	composer update
+
+docs:
+	$(MAKE) -C ./docs html
